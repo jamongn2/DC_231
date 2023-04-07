@@ -1,0 +1,28 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.topNav{
+    background-color: gray;
+    min-height: 10px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topNav__logo{
+    height: 36px;
+
+}
+
+.topNav__buttons{
+    display: flex;
+    gap: 16px;
+}
+
+.topNav__button{
+    color: white;
+    text-transform: capitalize;
+}
