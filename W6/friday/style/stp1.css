@@ -59,7 +59,11 @@ body {
 
 .flex p {
     text-align: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+}
+
+.flex .button {
+    margin-bottom: 36px;
 }
 
 .video {
