@@ -68,6 +68,9 @@
       gap: 24px;
       align-items: baseline;
     }
+    &__logo {
+      font-family: 'Dancing Script', cursive;
+    }
   }
   
   
@@ -278,15 +281,19 @@
   
   
   
-  @media(min-width:800px){
+  
     .container2{
       max-width: 1650px;
     }
     
-  }  
+  
   @media(max-width:550px){
+    .container{
+      padding-inline: 24px;
+    }
+
     .nav{
-      font-weight: 600;
+      font-weight: 500;
     }
     .nav .wrapper{
         display: flex;
@@ -324,4 +331,14 @@
     p {
       min-width: 18ch;
     }
+    #hero5{
+    p{
+      text-align: left;
+    }
+    h2{
+      margin-bottom: 10px;
+    }
+  }
   } 
+
+  

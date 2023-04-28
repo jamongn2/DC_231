@@ -60,6 +60,9 @@ body {
   gap: 24px;
   align-items: baseline;
 }
+.nav__logo {
+  font-family: "Dancing Script", cursive;
+}
 
 .main__text2 {
   text-align: center;
@@ -202,14 +205,16 @@ body {
   display: block;
 }
 
-@media (min-width: 800px) {
-  .container2 {
-    max-width: 1650px;
-  }
+.container2 {
+  max-width: 1650px;
 }
+
 @media (max-width: 550px) {
+  .container {
+    padding-inline: 24px;
+  }
   .nav {
-    font-weight: 600;
+    font-weight: 500;
   }
   .nav .wrapper {
     display: flex;
@@ -238,5 +243,11 @@ body {
   }
   p {
     min-width: 18ch;
+  }
+  #hero5 p {
+    text-align: left;
+  }
+  #hero5 h2 {
+    margin-bottom: 10px;
   }
 }/*# sourceMappingURL=stp1.css.map */
