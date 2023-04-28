@@ -186,7 +186,7 @@ body {
 
 #hero6 {
   background-color: rgb(194, 230, 218);
-  font-weight: 10;
+  font-weight: 500;
 }
 #hero6 .container {
   padding-top: 12px;
@@ -210,11 +210,11 @@ body {
 }
 
 @media (max-width: 550px) {
-  .container {
-    padding-inline: 24px;
-  }
   .nav {
     font-weight: 500;
+  }
+  .nav .container {
+    padding-inline: 12px;
   }
   .nav .wrapper {
     display: flex;
