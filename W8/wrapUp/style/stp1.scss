@@ -1,0 +1,355 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}.section{
+  // background-color: green;
+}
+.container {
+  // background-color: white;
+  $padding-inline-value: 64px;
+  max-width: 1200px + 2 * $padding-inline-value;
+  margin-inline: auto;
+  padding-inline: $padding-inline-value;
+}
+.wrapper {
+  // background-color: blue;
+  padding-block: 64px;
+  width: auto;
+  margin-inline: auto;
+
+}
+
+
+body {
+  color: black;
+}
+
+.main{
+&__media{
+  overflow: hidden;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+}
+
+.button {
+  width: fit-content;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: aquamarine;
+  font-weight: 700;
+  text-align: center;
+  &--type-text{
+    background-color: rgb(118, 234, 195);
+    color: white;
+
+
+
+
+}
+}
+
+.nav {
+    background-color: black;
+  color: white;
+  font-weight: 700;
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-block: 12px;
+  }
+  &__menuWrapper {
+    display: flex;
+    gap: 24px;
+    align-items: baseline;
+  }
+  &__logo {
+    font-family: 'Dancing Script', cursive;
+  }
+}
+
+
+
+  
+
+
+
+.main__text2{
+  text-align: center;
+}
+
+  
+
+
+#hero1{
+  background-color: black;
+
+  .container2{
+    color: white;
+    background-color: rgb(5, 5, 12);
+    margin-inline: auto;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    & >*{
+      flex: 1;
+    }
+
+  }
+  .wrapper2{
+    display: flex;
+    padding-block: 30px;
+    width: auto;
+    margin-inline: auto;
+    
+  
+  
+  }
+  .main{
+    &__text{
+      text-align: center;
+      color: azure;
+      font-weight: 700px;
+   
+
+    }
+
+
+    }
+    &__media{
+      min-width: 255px;
+      display: flex;
+      
+    }
+    .wrapper3{
+      display: block;
+      padding-block: 12px;
+    }
+    h1{
+      font-family: 'Dancing Script', cursive;
+      font-size: 36px;
+    }
+    p{
+      padding-top: 10px;
+    }
+  
+  }
+
+#hero2{
+  text-align: center;
+  .button {
+    margin-inline: auto;
+  }
+  .main {
+    &__text {
+      max-width: 600px;
+      margin-bottom: 24px;
+      margin-inline: auto;
+    }
+    &__media {
+      aspect-ratio: 16/9;
+    }
+  }
+  h2 {
+    margin-bottom: 16px;
+  }
+  p {
+    margin-bottom: 24px;
+  }
+}
+
+  
+  
+
+#hero3 {
+  .wrapper{
+
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  h2 {
+    max-width: 10ch;
+    text-align: left;
+  }
+  p{
+    text-align: right;
+    max-width: 50ch;
+  }
+
+
+  
+}
+
+#hero4 {
+  .main__text{
+    display: flex;
+
+  }
+
+  .container{
+    display: flex;
+    gap: 24px;
+
+  }
+  .main__media{
+    aspect-ratio: 4/3;
+  }
+
+
+}
+
+#hero5{
+  text-align: center;
+  .wrapper{
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    & > * {
+      flex: 1;
+    }
+  }
+  .main{
+    &__text{
+      text-align: center;
+      &__buttonWrapper{
+        display: flex;
+        gap: 16px;
+      }
+    }
+    &__media{
+      aspect-ratio: 4/3;
+    }
+  }
+  h2 {
+    margin-bottom: 32px;
+
+  }
+  p {
+    
+    margin-bottom: 24px;
+  }
+}
+
+#hero6{
+background-color: rgb(194, 230, 218);
+font-weight: 500;
+.container{
+  padding-top: 12px;
+  padding-bottom: 64px;
+}
+.nav{
+  &__menuWrapper{
+    display: block;
+  }
+}
+
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-block: 12px;
+}
+&__menuWrapper {
+  display: block;
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .container2{
+    max-width: 1650px;
+  }
+  
+
+@media(max-width:550px){
+  .container{
+    $padding-inline-value: 32px;
+    max-width: 1200px + 2 * $padding-inline-value;
+    margin-inline: auto;
+    padding-inline: $padding-inline-value;
+
+  }
+ 
+
+  .nav{
+    font-weight: 500;
+  }
+  .nav .container{
+    padding-inline: 12px;
+  }
+  .nav .wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding-block: 8px;
+  }
+  .nav__menuWrapper{
+      display: flex;
+      gap: 8px;
+
+      align-items: baseline;
+  }
+
+  
+
+ 
+
+  #hero1{
+    .container2{
+      display: block;
+    }
+
+    .main__text{
+      justify-content: space-between;
+      text-align: center;
+      padding-top: 12px;
+    }
+  }
+
+  #hero4{
+    .container{
+      display: block;
+    }
+    .wrapper{
+      padding-block: 24px;
+    }
+  }
+
+  p {
+    min-width: 18ch;
+  }
+  #hero5{
+  p{
+    text-align: left;
+  }
+  h2{
+    margin-bottom: 10px;
+  }
+}
+} 
