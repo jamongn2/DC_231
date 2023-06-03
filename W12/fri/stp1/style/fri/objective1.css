@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    color-scheme: light dark;
+}
+
+body {
+    margin : 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5;
+
+}
+
+img , video, svg{
+    max-width: 100%;
+}
+
+main{
+    width: min(60ch, 100% - 4rem);
+    margin-inline: auto;
+
+}
