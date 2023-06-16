@@ -119,8 +119,7 @@ section:nth-child(even) {
 }
 
 #section5 {
-  .animTarget {
-  }
+
   &.triggered {
     .animTarget {
       animation: wiggle 2s linear infinite;

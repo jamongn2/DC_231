@@ -1,0 +1,243 @@
+$min-height:2rem;
+$progressBar-height :16px;
+$wrapper-padding-inline:2rem;
+
+*,
+*::before
+*::after{
+    box-sizing: border-box;
+}
+
+.hide{
+    display: none;
+}
+
+html{
+    color-scheme: light dark;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: system-ui;
+    font-size:1.125rem ;
+    line-height: 1.5;
+}
+.wrapper{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: calc(80ch + 2 * $wrapper-padding-inline);
+    margin-inline: auto;
+    padding-inline: $wrapper-padding-inline;
+
+    min-height: max(50dvh, $min-height);
+    // background-color: cadetblue;
+
+}
+
+header{
+    text-align: center;
+    text-wrap: balance;
+    word-break:keep-all;
+}
+
+// :nth-child()와 :nth-of-type() 의 차이 구분하기 
+// 홀수의 섹션만 백그라운드에 색을 넣음
+section:nth-of-type(odd){
+    background-color: cadetblue;
+}
+
+.stickyWrapper{
+    display: grid;
+    position: relative;
+    grid-template-columns: fit-content(0) 1fr;
+    grid-template-rows: 1fr;
+}
+
+// main은 가로로 2칸, aside는 가로로 1칸 차지 
+main{
+    z-index: 1;
+    grid-column: 1 / span 2 ;
+    grid-row: 1;
+}
+
+aside{
+    position: sticky;
+    top: 0%;
+    z-index: 3;
+    grid-column: 1 ;
+    grid-row: 1;
+    width: fit-content;
+    height: max(100dvh, $min-height);
+    padding-inline: 1rem 1.5rem;
+    border-radius: 0 1rem 1rem 0;
+    background-color: rgb(0 0 0/ 50%);
+    backdrop-filter: blur(.25rem);
+    font-size: .875rem;
+
+
+    ol{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+
+        li {
+            display: flex;
+            align-content: center;
+            gap: 0.75rem;
+            color: white;
+            font-weight: 600;
+            text-transform: capitalize;
+     
+            
+            &::before{
+                content:"" ;
+                width: 1rem;
+                height: 1rem;
+                margin-top: .125rem;
+                border-radius: 999999999px;
+                border: .125rem solid white;
+
+            }
+        }
+        
+        a{
+            text-decoration: none;
+
+        }
+    }
+}
+
+// 가로로 두칸,세로로 한칸 
+.progressBar{
+    position: sticky;
+    top: 0%;
+    z-index: 2;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    width: 100%;
+    height:$progressBar-height;
+    background-color: rgb(64 64 64);
+
+    .indicater{
+        position: absolute;
+        inset: 0;
+        // transform: scaleX(50%);
+        transform-origin: left;
+        background-color: blue;
+    }
+
+}
+
+footer{
+    .wrapper{
+        min-height: max(100dvh, $min-height);
+    }
+}
+
+
+
+@media(width < 67.5rem){
+    .stickyWrapper{
+        grid-template-columns:1fr;
+        grid-template-rows: auto auto 1fr;
+    }
+    
+    // main은 가로로 2칸, aside는 가로로 1칸 차지 
+    main{
+        grid-column: 1 ;
+        grid-row: 3;
+    }
+    aside{
+        top: $progressBar-height;
+        grid-column: 1 ;
+        grid-row: 3;
+        width: 100%;
+        height: fit-content;
+        padding-inline: unset;
+        padding-block: 1rem;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-stlye: none;
+
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        border-radius: 0 0 1rem 1rem ;
+
+
+    
+        ol{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 3rem;
+    
+    
+
+            
+        }
+    }
+
+    
+    // 가로로 두칸,세로로 한칸 
+    .progressBar{
+
+        grid-column: 1;
+        grid-row: 1;
+
+    
+    }
+}
+
+@media(width < 60rem){
+    aside{
+        top: $progressBar-height;
+        grid-column: 1 ;
+        grid-row: 3;
+        width: 100%;
+        height: fit-content;
+        padding-inline: unset;
+        padding-block: 1rem;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-stlye: none;
+
+
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        border-radius: 0 0 1rem 1rem ;
+
+
+    
+        ol{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 3rem;
+    
+    
+
+            
+        }
+    }
+
+    
+    // 가로로 두칸,세로로 한칸 
+    .progressBar{
+
+        grid-column: 1;
+        grid-row: 1;
+
+    
+    }
+}
