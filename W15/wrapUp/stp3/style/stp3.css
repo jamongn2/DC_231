@@ -323,6 +323,9 @@ footer .wrapper p {
   }
 }
 @media (width < 67.5rem) {
+  .wrapper {
+    max-width: 60ch;
+  }
   .stickyWrapper {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr;
