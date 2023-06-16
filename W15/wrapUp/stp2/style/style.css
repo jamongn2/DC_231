@@ -42,6 +42,7 @@
 .card {
   cursor: pointer;
   max-width: 500px;
+  display: flex;
   border: 0.0625rem solid #ccc;
   border-radius: 0.5rem;
   background-color: white;
